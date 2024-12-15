@@ -1,0 +1,240 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-image: url(./image.png); */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(image.png);
+    height: 100vh;
+    width: 100vw;
+    column-gap: 5%;
+    font-family: "Poppins", serif;
+}
+
+.left-side {
+    width: 525px;
+    height: 220px;
+}
+
+.leftheader {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: -0.5208333134651184px;
+    text-underline-position: from-font;
+    color: white;
+    width: 525px;
+    height: 131px;
+}
+
+.leftfooter {
+    font-weight: 500;
+    line-height: 26px;
+    text-underline-position: from-font;
+    color: white;
+    width: 525px;
+    height: 78px;
+}
+
+.headerRight {
+    width: 540px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #5E54A4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 8px 0px 0px #00000025;
+    margin-bottom: 24px;
+}
+
+.headerrightText {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: 0.2678571045398712px;
+    text-underline-position: from-font;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+#headerrightTextspan {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0.2678571045398712px;
+    text-underline-position: from-font;
+}
+
+.footerRight {
+    width: 540px;
+    height: 474px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 0px 0px #00000025;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputStyle {
+    width: 460px;
+    height: 56px;
+    border-radius: 5px;
+    border: 1px solid #DEDEDE;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.25px;
+    text-underline-position: from-font;
+    color: #3D3B48;
+    padding-left: 32px;
+}
+
+input::placeholder {
+    width: 120px;
+    height: 26px;
+    opacity: 75%;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 0.25px;
+    text-align: left;
+    text-underline-position: from-font;
+    margin-left: 32px;
+    color: #3D3B48;
+}
+
+input:focus {
+    border: 1px solid #5E54A4;
+    outline: none;
+}
+
+#submit {
+    width: 460px;
+    height: 59px;
+    border-radius: 5px;
+    background-color: #38CC8B;
+    box-shadow: 0px -4px 0px 0px #00000017 inset;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 26px;
+    letter-spacing: 1px;
+    color: white;
+    border: none;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: #77E2B3;
+    box-shadow: 0px -4px 0px 0px #00000017 inset;
+}
+
+.endRight {
+    width: 380px;
+    height: 26px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 26px;
+    text-underline-position: from-font;
+    color: #BAB7D4;
+    text-align: center;
+}
+
+#endrightText {
+    color: #FF7979;
+    font-weight: 700;
+}
+
+@media (max-width: 1250px) {
+    .container {
+        flex-direction: column;
+        row-gap: 3%;
+    }
+    .leftheader {
+        text-align: center;
+    }
+    .leftfooter {
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        row-gap: 2%;
+    }
+    
+    .left-side {
+        width: 327px;
+        height: 226px;
+    }
+    
+    .leftheader {
+        font-size: 28px;
+        line-height: 36px;
+        width: 327px;
+        height: 80px;
+    }
+    
+    .leftfooter {
+        line-height: 16px;
+        width: 327px;
+        height: 130px;
+    }
+    
+    .headerRight {
+        width: 327px;
+        height: 88px;
+
+    }
+    
+    .headerrightText {
+        width: 194px;
+        height: 52px;
+    }
+
+    
+    #headerrightTextspan {
+        font-weight: 500;
+    }
+    
+    .footerRight {
+        width: 327px;
+        height: 442px;
+        gap: 8px;
+    }
+    
+    .inputStyle {
+        width: 279px;
+        height: 56px;
+        padding-left: 9.41px;
+    }
+    
+    input::placeholder {
+        width: 104px;
+        height: 26px;
+        margin-left: 9.41px;
+    }
+        
+    #submit {
+        width: 279px;
+        height: 56px;
+        border-radius: 5px;
+        pointer-events: none;
+    }
+    
+    .endRight {
+        width: 249px;
+        height: 42px;
+        line-height: 21px;
+    }
+    
+} 
