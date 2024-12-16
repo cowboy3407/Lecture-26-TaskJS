@@ -278,12 +278,12 @@ input.error-placeholder::placeholder {
 
 @media (max-width: 375px) {
     .container {
-        gap: 0;
+        gap: 3;
     }
 
     .left-side {
-        width: 350px;
-        height: 226px;
+        width: auto;
+        height: auto;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -291,7 +291,7 @@ input.error-placeholder::placeholder {
     }
     
     .leftheader {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 36px;
         width: 250px;
         height: 100px;
@@ -299,13 +299,13 @@ input.error-placeholder::placeholder {
     
     .leftfooter {
         line-height: 16px;
-        width: 327px;
-        height: 130px;
+        width: auto;
+        height: auto;
         font-size: 15px;
     }
     
     .headerRight {
-        height: 60px;
+        height: 50px;
 
     }
     
@@ -321,7 +321,7 @@ input.error-placeholder::placeholder {
     
     .footerRight {
         max-width: 327px;
-        height: 280px;
+        height: 300px;
         gap: 8px;
     }
 
