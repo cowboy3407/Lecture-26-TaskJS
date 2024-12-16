@@ -17,14 +17,11 @@ form.addEventListener('submit', (g) => {
     let hasError = false;
 
     const footerRight = document.querySelector('.footerRight');
-    footerRight.style.height = '474px'; 
-    footerRight.style.width = '540px';
-    footerRight.classList.add('expanded');  
-    footerRight.classList.remove('expanded');
+
 
     if (firstName.value === '' || firstName.value == null) {
         g.preventDefault();
-        firstName.placeholder= '';
+        firstName.placeholder = '';
         firstNameError.textContent = "First Name cannot be empty";
         firstName.style.borderColor = "#FF7979";
         firstName.style.background = "url('./Group\\ 11.png') no-repeat right";
@@ -40,7 +37,7 @@ form.addEventListener('submit', (g) => {
 
     if (lastName.value === '' || lastName.value == null) {
         g.preventDefault();
-        lastName.placeholder='';
+        lastName.placeholder = '';
         lastNameError.textContent = "Last Name cannot be empty";
         lastName.style.borderColor = "#FF7979";
         lastName.style.background = "url('./Group\\ 11.png') no-repeat right";
@@ -61,6 +58,7 @@ form.addEventListener('submit', (g) => {
         email.style.background = "url('./Group\\ 11.png') no-repeat right";
         email.style.backgroundPositionX = "95%";
         email.placeholder = "email@example/com";
+        email.classList.add('error-placeholder');
         emailError.classList.add('active');
         hasError = true;
     } else if (!emailPattern.test(email.value.trim())) {
@@ -70,18 +68,20 @@ form.addEventListener('submit', (g) => {
         email.style.background = "url('./Group\\ 11.png') no-repeat right";
         email.style.backgroundPositionX = "95%";
         email.placeholder = "email@example/com";
+        email.classList.add('error-placeholder');
         emailError.classList.add('active');
         hasError = true;
     } else {
         emailError.textContent = "";
         email.style.borderColor = "";
         email.style.background = "";
+        email.classList.remove('error-placeholder');
         emailError.classList.remove('active');
     }
 
     if (password.value === '' || password.value == null) {
         g.preventDefault();
-        password.placeholder ='';
+        password.placeholder = '';
         passwordError.textContent = "Password cannot be empty";
         password.style.borderColor = "#FF7979";
         password.style.background = "url('./Group\\ 11.png') no-repeat right";
@@ -90,6 +90,7 @@ form.addEventListener('submit', (g) => {
         hasError = true;
     } else if (!passwordPattern.test(password.value)) {
         g.preventDefault();
+        password.placeholder = '';
         passwordError.textContent = "Password must be at least 6 characters long and include a letter and a number";
         password.style.borderColor = "#FF7979";
         password.style.background = "url('./Group\\ 11.png') no-repeat right";
@@ -104,9 +105,9 @@ form.addEventListener('submit', (g) => {
     }
 
     if (hasError) {
-        footerRight.style.height = '562px'; 
-        footerRight.style.width = '540px';
-        g.preventDefault(); 
+        footerRight.classList.add('expanded');
+        g.preventDefault();
+    } else {
+        footerRight.classList.remove('expanded');
     }
-
 });

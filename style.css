@@ -85,6 +85,10 @@
     transition: height 0.5s ease, width 0.5s ease;
 }
 
+.footerRight.expanded {
+    height: 562px;
+}
+
 .inputStyle {
     width: 460px;
     height: 56px;
@@ -100,7 +104,7 @@
 }
 
 input::placeholder {
-    width: 150px;
+    width: 100%;
     height: 26px;
     opacity: 75%;
     font-size: 14px;
@@ -116,6 +120,10 @@ input::placeholder {
 input:focus {
     border: 1px solid #5E54A4;
     outline: none;
+}
+
+input.error-placeholder::placeholder {
+    color: #FF7979;
 }
 
 
@@ -166,19 +174,14 @@ input:focus {
     color: #FF7979;     
     transform: translateY(-10px);
     transition: opacity 0.4s ease, transform 0.4s ease;
-    height: 0;
-    overflow: hidden;
 }
 .error.active {
     opacity: 1;
       transform: translateY(0);
-      height: auto; 
+      max-height: auto; 
   }
   
-  .footerRight.expanded {
-    height: 562px;
-    width: 540px; 
-}
+
 
 @media (max-width: 1250px) {
     .container {
@@ -191,6 +194,7 @@ input:focus {
     .leftfooter {
         text-align: center;
     }
+    
     .error {
         padding-left: 40%;
     }
@@ -236,14 +240,13 @@ input:focus {
     }
     
     .footerRight {
-        width: 327px;
+        max-width: 327px;
         height: 442px;
         gap: 8px;
     }
 
     .footerRight.expanded {
-        height: 460px; 
-        width: 327px;
+        max-height: 460px; 
     }
     
     .inputStyle {
@@ -253,16 +256,16 @@ input:focus {
     }
     
     input::placeholder {
-        width: 104px;
+        width: 100%;
         height: 26px;
         margin-left: 9.41px;
     }
         
+    
     #submit {
         width: 279px;
         height: 56px;
         border-radius: 5px;
-        pointer-events: none;
     }
     
     .endRight {
@@ -272,3 +275,81 @@ input:focus {
     }
     
 } 
+
+@media (max-width: 375px) {
+    .container {
+        gap: 0;
+    }
+
+    .left-side {
+        width: 350px;
+        height: 226px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .leftheader {
+        font-size: 20px;
+        line-height: 36px;
+        width: 250px;
+        height: 100px;
+    }
+    
+    .leftfooter {
+        line-height: 16px;
+        width: 327px;
+        height: 130px;
+        font-size: 15px;
+    }
+    
+    .headerRight {
+        height: 60px;
+
+    }
+    
+    .headerrightText {
+        width: 194px;
+        height: 52px;
+    }
+
+    
+    #headerrightTextspan {
+        font-weight: 500;
+    }
+    
+    .footerRight {
+        max-width: 327px;
+        height: 280px;
+        gap: 8px;
+    }
+
+    .footerRight.expanded {
+        max-height: 345px; 
+    }
+    
+    .inputStyle {
+        width: 279px;
+        height: 30px;
+        padding-left: 9.41px;
+    }
+    
+    input::placeholder {
+        width: 100%;
+        height: 26px;
+        margin-left: 9.41px;
+    }
+        
+    #submit {
+        width: 279px;
+        height: 30px;
+        border-radius: 5px;
+    }
+    
+    .endRight {
+        width: 249px;
+        height: 32px;
+        line-height: 21px;
+    }
+}
