@@ -10,7 +10,8 @@ const form = document.getElementById('signup-form');
 
 const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
-
+const firstNamePattern = /^[a-zA-Z]{2,}$/;
+const lastNamePattern = /^[a-zA-Z]{2,}(?:[ '-][a-zA-Z]{2,})*$/;
 
 
 form.addEventListener('submit', (g) => {
@@ -18,11 +19,18 @@ form.addEventListener('submit', (g) => {
 
     const footerRight = document.querySelector('.footerRight');
 
-
     if (firstName.value === '' || firstName.value == null) {
         g.preventDefault();
         firstName.placeholder = '';
         firstNameError.textContent = "First Name cannot be empty";
+        firstName.style.borderColor = "#FF7979";
+        firstName.style.background = "url('./Group\\ 11.png') no-repeat right";
+        firstName.style.backgroundPositionX = "95%";
+        firstNameError.classList.add('active');
+        hasError = true;
+    } else if (!firstNamePattern.test(firstName.value.trim())) {
+        g.preventDefault();
+        firstNameError.textContent = "First Name must contain at least 2 letters and no numbers/special characters";
         firstName.style.borderColor = "#FF7979";
         firstName.style.background = "url('./Group\\ 11.png') no-repeat right";
         firstName.style.backgroundPositionX = "95%";
@@ -39,6 +47,14 @@ form.addEventListener('submit', (g) => {
         g.preventDefault();
         lastName.placeholder = '';
         lastNameError.textContent = "Last Name cannot be empty";
+        lastName.style.borderColor = "#FF7979";
+        lastName.style.background = "url('./Group\\ 11.png') no-repeat right";
+        lastName.style.backgroundPositionX = "95%";
+        lastNameError.classList.add('active');
+        hasError = true;
+    } else if (!lastNamePattern.test(lastName.value.trim())) {
+        g.preventDefault();
+        lastNameError.textContent = "Last Name can only contain minimum of 2 letters, spaces, or hyphens";
         lastName.style.borderColor = "#FF7979";
         lastName.style.background = "url('./Group\\ 11.png') no-repeat right";
         lastName.style.backgroundPositionX = "95%";
