@@ -16,11 +16,10 @@ const lastNamePattern = /^[a-zA-Z]{2,}(?:[ '-][a-zA-Z]{2,})*$/;
 
 form.addEventListener('submit', (g) => {
     let hasError = false;
-
+    g.preventDefault();
     const footerRight = document.querySelector('.footerRight');
 
     if (firstName.value === '' || firstName.value == null) {
-        g.preventDefault();
         firstName.placeholder = '';
         firstNameError.textContent = "First Name cannot be empty";
         firstName.style.borderColor = "#FF7979";
@@ -29,7 +28,6 @@ form.addEventListener('submit', (g) => {
         firstNameError.classList.add('active');
         hasError = true;
     } else if (!firstNamePattern.test(firstName.value.trim())) {
-        g.preventDefault();
         firstNameError.textContent = "First Name must contain at least 2 letters and no numbers/special characters";
         firstName.style.borderColor = "#FF7979";
         firstName.style.background = "url('./Group\\ 11.png') no-repeat right";
@@ -44,7 +42,6 @@ form.addEventListener('submit', (g) => {
     }
 
     if (lastName.value === '' || lastName.value == null) {
-        g.preventDefault();
         lastName.placeholder = '';
         lastNameError.textContent = "Last Name cannot be empty";
         lastName.style.borderColor = "#FF7979";
@@ -53,7 +50,6 @@ form.addEventListener('submit', (g) => {
         lastNameError.classList.add('active');
         hasError = true;
     } else if (!lastNamePattern.test(lastName.value.trim())) {
-        g.preventDefault();
         lastNameError.textContent = "Last Name can only contain minimum of 2 letters, spaces, or hyphens";
         lastName.style.borderColor = "#FF7979";
         lastName.style.background = "url('./Group\\ 11.png') no-repeat right";
@@ -68,7 +64,6 @@ form.addEventListener('submit', (g) => {
     }
 
     if (email.value === '' || email.value == null) {
-        g.preventDefault();
         emailError.textContent = "Email cannot be empty";
         email.style.borderColor = "#FF7979";
         email.style.background = "url('./Group\\ 11.png') no-repeat right";
@@ -78,7 +73,6 @@ form.addEventListener('submit', (g) => {
         emailError.classList.add('active');
         hasError = true;
     } else if (!emailPattern.test(email.value.trim())) {
-        g.preventDefault();
         emailError.textContent = "Looks like this is not an email";
         email.style.borderColor = "#FF7979";
         email.style.background = "url('./Group\\ 11.png') no-repeat right";
@@ -96,7 +90,6 @@ form.addEventListener('submit', (g) => {
     }
 
     if (password.value === '' || password.value == null) {
-        g.preventDefault();
         password.placeholder = '';
         passwordError.textContent = "Password cannot be empty";
         password.style.borderColor = "#FF7979";
@@ -105,7 +98,6 @@ form.addEventListener('submit', (g) => {
         passwordError.classList.add('active');
         hasError = true;
     } else if (!passwordPattern.test(password.value)) {
-        g.preventDefault();
         password.placeholder = '';
         passwordError.textContent = "Password must be at least 6 characters long and include a letter and a number";
         password.style.borderColor = "#FF7979";
