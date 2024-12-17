@@ -276,9 +276,9 @@ input.error-placeholder::placeholder {
     
 } 
 
-@media (max-width: 375px) {
+@media (max-width: 450px) {
     .container {
-        gap: 3;
+        gap: 3%;
     }
 
     .left-side {
@@ -289,6 +289,73 @@ input.error-placeholder::placeholder {
         flex-direction: column;
         align-items: center;
     }
+    
+    .leftheader {
+        font-size: 22px;
+        line-height: 36px;
+        width: 250px;
+        height: 100px;
+    }
+    
+    .leftfooter {
+        line-height: 16px;
+        width: auto;
+        height: auto;
+        font-size: 17px;
+    }
+    
+    .headerRight {
+        height: 70px;
+
+    }
+    
+    .headerrightText {
+        width: 194px;
+        height: 52px;
+    }
+
+    
+    #headerrightTextspan {
+        font-weight: 500;
+    }
+    
+    .footerRight {
+        max-width: 327px;
+        height: 400px;
+        gap: 8px;
+    }
+
+    .footerRight.expanded {
+        height: 440px; 
+    }
+    
+    .inputStyle {
+        width: 279px;
+        height: 40px;
+        padding-left: 9.41px;
+    }
+    
+    input::placeholder {
+        width: 100%;
+        height: 26px;
+        margin-left: 9.41px;
+    }
+        
+    #submit {
+        width: 279px;
+        height: 50px;
+        border-radius: 5px;
+    }
+    
+    .endRight {
+        width: 249px;
+        height: 32px;
+        line-height: 21px;
+    }
+}
+
+
+@media (max-width: 375px) {
     
     .leftheader {
         font-size: 18px;
@@ -309,15 +376,6 @@ input.error-placeholder::placeholder {
 
     }
     
-    .headerrightText {
-        width: 194px;
-        height: 52px;
-    }
-
-    
-    #headerrightTextspan {
-        font-weight: 500;
-    }
     
     .footerRight {
         max-width: 327px;
@@ -335,11 +393,6 @@ input.error-placeholder::placeholder {
         padding-left: 9.41px;
     }
     
-    input::placeholder {
-        width: 100%;
-        height: 26px;
-        margin-left: 9.41px;
-    }
         
     #submit {
         width: 279px;
@@ -347,9 +400,4 @@ input.error-placeholder::placeholder {
         border-radius: 5px;
     }
     
-    .endRight {
-        width: 249px;
-        height: 32px;
-        line-height: 21px;
-    }
 }

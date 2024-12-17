@@ -8,8 +8,6 @@ const password = document.getElementById('password');
 const passwordError = document.getElementById('password-error');
 const form = document.getElementById('signup-form');
 
-const lastNamePattern = /^[A-Za-z]+(?:[ -][A-Za-z]+)*$/;
-const firstNamePattern =  /^[A-Za-z]+([-'][A-Za-z]+)?$/;
 const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
 const firstNamePattern = /^[a-zA-Z]{2,}$/;
